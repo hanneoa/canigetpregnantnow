@@ -35,6 +35,7 @@
     <h2>1. Input the first date of your last period.</h2>
       <!-- THIS PART IS FOR THE CALENDAR-->
 
+    <form method="post" action="/day1">
       <div class="container">
           <div class="row">
               <div class="col-sm-6">
@@ -54,18 +55,23 @@
               </script>
           </div>
       </div>
+      <input type="submit" value="Submit" id="submit"/>
+    </form>
 
   </div>
 
   <h2>2. Input the length of your cycle.</h2>
     <p><i>if you are unsure, the average cycle is 28 days</i></p>
 
-  <div class=slider>
+  <form method="post" action="/CycleLength">
+    <div class=slider>
       <!-- THIS PART IS FOR THE NUMBER SLIDER-->
       <p id="sliderValue"></p>
       <label for="customRange1"></label>
       <input type="range" class="custom-range" min="21" max="40" id="customRange1">
-  </div>
+    </div>
+    <input type="submit" value="Submit" id="submit"/>
+  </form>
 
 <script>
   $("#customRange1").change(function(){
