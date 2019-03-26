@@ -41,8 +41,8 @@ def Can_I_get_pregnant(day1, CycleLength):
     OvulationFirstDay = day1 + CycleLength/2
     return OvulationFirstDay
 
-exampleDate = Give_first_day_of_cycle()
-exampleLength = Give_length_of_cycle()
-print Can_I_get_pregnant(exampleDate, exampleLength)
+#exampleDate = Give_first_day_of_cycle()
+#exampleLength = Give_length_of_cycle()
+#print Can_I_get_pregnant(exampleDate, exampleLength)
 
 app.run()
