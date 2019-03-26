@@ -25,6 +25,27 @@
   <div class=calendar>
     <h2>1. Input the first date of your last period.</h2>
       <!-- THIS PART IS FOR THE CALENDAR-->
+
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6">
+                  <div class="form-group">
+                      <div class="input-group date" id="datetimepicker1">
+                          <input type="text" class="form-control">
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+              <script type="text/javascript">
+                  $(function () {
+                      $('#datetimepicker1').datetimepicker();
+                  });
+              </script>
+          </div>
+      </div>
+
   </div>
 
   <h2>2. Input the length of your cycle.</h2>
