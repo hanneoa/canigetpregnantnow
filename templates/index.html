@@ -62,10 +62,17 @@
   <div class=slider>
       <!-- THIS PART IS FOR THE NUMBER SLIDER-->
       <p id="sliderValue"></p>
-      <label for="customRange1">Example range</label>
+      <label for="customRange1"></label>
       <input type="range" class="custom-range" min="21" max="40" id="customRange1">
   </div>
 
+<script>
+  $("#customRange1").change(function(){
+    var newValue = $('#customRange1').val();
+    console.log(newValue);
+    $("#sliderValue").text(newValue);
+  });
+  </script>
 
 
 </body>
