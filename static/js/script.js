@@ -1,14 +1,9 @@
 
 
 // This is the slider JavaScript //
-// With JQuery
-$("#ex8").slider({
-	tooltip: 'always'
-});
-
-// Without JQuery
-var slider = new Slider("#ex8", {
-	tooltip: 'always'
-});
-
+  $("#customRange1").change(function(){
+    var newValue = $('#customRange1').val();
+    console.log(newValue);
+    $("#sliderValue").text(newValue);
+  });
 // This is the end of slider JavaScript //

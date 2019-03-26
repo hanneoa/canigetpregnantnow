@@ -1,15 +1,5 @@
 
 
 /* This is the slider format */
-.slider {
-  background-color: #03A9F4;
-  overflow: hidden;
-  font-family: 'Ropa Sans', sans-serif;
-  text-align:center;
-    display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 
 /*End of slider formatting*/
