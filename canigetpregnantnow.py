@@ -12,27 +12,29 @@
 
 from datetime import datetime
 
-def Change_day1_to_integer():
-	form_data = request.form #Getting hold of a Form object that is sent from a browser.
-	day1 = form_data["day1"]
-    formatday1 = datetime.datetime(day1)
+#def Change_day1_to_integer():
+#	form_data = request.form #Getting hold of a Form object that is sent from a browser.
+#	day1 = form_data["day1"]
+#    formatday1 = datetime.datetime(day1)
 
 
-def Give_ovulation_date():
-    form_data = request.form #Getting hold of a Form object that is sent from a browser.
-	CycleLength = form_data["CycleLength"]
+#def Give_ovulation_date():
+#    form_data = request.form #Getting hold of a Form object that is sent from a browser.
+#	CycleLength = form_data["CycleLength"]
+
+def Give_first_day_of_cycle():
+    day1 = raw_input()
+    return int(day1)
+
+def Give_length_of_cycle():
+    CycleLength = raw_input()
+    return int(CycleLength)
 
 def Can_I_get_pregnant(day1, CycleLength):
-    day1() + CycleLength()
+    OvulationFirstDay = day1 + CycleLength/2
+    return OvulationFirstDay
 
 
-
-
-    date_splitted = day1.split('/') #e.g. ['5', '2', '2019']
-    day_string = date_splitted[0] #e.g. '5'
-    month_string = date_splitted[1] #e.g. '2'
-    year_string = date_splitted[2] #e.g. '2019'
-
-
-
-	return render_template("gen.html", generation=gen)
+exampleDate = Give_first_day_of_cycle()
+exampleLength = Give_length_of_cycle()
+print Can_I_get_pregnant(exampleDate, exampleLength)
