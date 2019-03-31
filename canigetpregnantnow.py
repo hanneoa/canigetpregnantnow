@@ -10,18 +10,18 @@
     #push out first day (and following 5-10 days) as ovulation stage
     #convert back to date
 
-from flask import Flask , render_template, request
+from flask import Flask, render_template, request
 from datetime import datetime
 
 app = Flask("Test")
 
-@app.route("/day1", methods=["POST"])
+@app.route("/canigetpregnant", methods=["POST"])
 def Change_day1_to_integer():
 	form_data = request.form #Getting hold of a Form object that is sent from a browser.
 	day1 = form_data["day1"]
 	formatday1 = datetime.datetime(day1)
 
-@app.route("/CycleLength", methods=["POST"])
+@app.route("/canigetpregnant", methods=["POST"])
 def Give_ovulation_date():
     form_data = request.form #Getting hold of a Form object that is sent from a browser.
 	#CycleLength = form_data["CycleLength"]
