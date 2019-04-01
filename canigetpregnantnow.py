@@ -39,7 +39,15 @@ def Give_length_of_cycle():
 
 def Can_I_get_pregnant(day1, CycleLength):
     OvulationFirstDay = day1 + CycleLength/2
-    return OvulationFirstDay
+	return OvulationFirstDay
+
+
+def Ovulation_week(OvulationFirstDay):
+	if OvulationFirstDay >= 14,OvulationFirstDay <= 21,
+	return 'You could get pregnant this week',
+	if OvulationFirstDay <= 14,OvulationFirstDay >= 21,
+	return 'You are less likely to get pregnant this week'
+
 
 #exampleDate = Give_first_day_of_cycle()
 #exampleLength = Give_length_of_cycle()
