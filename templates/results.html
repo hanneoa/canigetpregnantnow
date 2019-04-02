@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Can I get pregnant now?</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    </head>
+
+    <body>
+
+            {% if ovulation %}
+
+                <p> <h2> Your chance of pregnancy <b>
+                  {{data}}! </b> chance of pregnancy! </h2></p>
+
+            {% else %}
+
+            <p>Hello - No Message!</p>
+
+            {% endif %}
+
+          <p>Date: {{data['current_date']}}!</p>
+          <p>Mood: {{data['mood']}}!</p>
+          <p>Color: {{data['color']}}!</p>
+          <p>Lucky Number: {{data['lucky_number']}}!</p>
+          <p>Compatibility: {{data['compatibility']}}!</p>
+          <p>Message : {{data['description']}}!</p>
+
+      </body>
