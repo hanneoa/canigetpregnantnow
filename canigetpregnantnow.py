@@ -15,16 +15,12 @@ from datetime import datetime
 
 app = Flask("Test")
 
-print "Current day:" % now.day
 print "Current day:" + str(datetime.now().month) + ":"+ str(datetime.now().day)
 
 @app.route("/")
 def landingPage():
 	return render_template("index.html")
 
-def Change_day1_to_integer():
-	form_data = request.form #Getting hold of a Form object that is sent from a browser.
-	formatday1 = datetime.datetime(day1)
 @app.route("/canigetpregnant", methods=["POST"])
 def handle_pregnant_request2():
 	print "1"
