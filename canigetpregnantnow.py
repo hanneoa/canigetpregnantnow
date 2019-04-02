@@ -16,6 +16,7 @@ from datetime import datetime
 app = Flask("Test")
 
 print "Current day:" % now.day
+print "Current day:" + str(datetime.now().month) + ":"+ str(datetime.now().day)
 
 @app.route("/")
 def landingPage():
@@ -24,12 +25,31 @@ def landingPage():
 def Change_day1_to_integer():
 	form_data = request.form #Getting hold of a Form object that is sent from a browser.
 	formatday1 = datetime.datetime(day1)
+@app.route("/canigetpregnant", methods=["POST"])
+def handle_pregnant_request2():
+	print "1"
+	# formatday1 = datetime.datetime(day1)
+	return render_template("results.html")
 
+@app.route("/canigetpregnant1", methods=["POST"])
+def handle_pregnant_request():
+	form_data = request.form #Getting hold of a Form object that is sent from a browser.
+	range = form_data["customRange1"]
+	day1= form_data["firstDate"]
+	print range
+	print day1
+	# formatday1 = datetime.datetime(day1)
+	return render_template("results.html")
+
+@app.route("/results", methods=["POST"])
 def Give_ovulation_date():
 	form_data = request.form
+	print "test"
 	return render_template("index.html")
 
+#def Can_I_get_pregnant(day1, CycleLength):
 #    day1() + CycleLength()
+#	return 5
 
 def Give_first_day_of_cycle():
    day1 = raw_input()
@@ -40,6 +60,8 @@ def Give_length_of_cycle():
     return int(CycleLength)
 
 def Can_I_get_pregnant(day1, CycleLength):
+	OvulationFirstDay = day1 + CycleLength/2
+	return OvulationFirstDay
 
 
 def Ovulation_week(OvulationFirstDay):
