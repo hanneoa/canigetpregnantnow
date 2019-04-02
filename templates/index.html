@@ -66,7 +66,12 @@
       <label for="customRange1"></label>
       <input type="range" class="custom-range" min="21" max="40" id="customRange1">
     </div>
-    <input type="submit" value="Submit" id="submit"/>
+
+    <form action="{{ url_for('/results') }}" method="post">
+      <label for="text">Please Submit</label>
+      <input type="submit" value="Submit" id="submit"/>
+    </form>
+
   </form>
 
 <script>
