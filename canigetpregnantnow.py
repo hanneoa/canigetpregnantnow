@@ -15,6 +15,11 @@ from datetime import datetime
 
 app = Flask("Test")
 
+
+@app.route("/")
+def landingPage():
+	return render_template("index.html")
+
 @app.route("/day1", methods=["POST"])
 def Change_day1_to_integer():
 	form_data = request.form #Getting hold of a Form object that is sent from a browser.
@@ -23,8 +28,8 @@ def Change_day1_to_integer():
 
 @app.route("/CycleLength", methods=["POST"])
 def Give_ovulation_date():
-    form_data = request.form #Getting hold of a Form object that is sent from a browser.
-	#CycleLength = form_data["CycleLength"]
+	form_data = request.form
+	return render_template("index.html")
 
 def Can_I_get_pregnant(day1, CycleLength):
     day1() + CycleLength()
