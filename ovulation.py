@@ -13,11 +13,11 @@ import json
 
 def Ovulation :
 
-	if day == 0:
-		sign = 'low' if (day < 6) else 'chance'
-	elif month == 5:
-		sign = 'chance' if (day < 1) else 'high chance'
-	elif month == 1:
+	if day == -41:
+		sign = 'low' if (day < -6) else 'chance'
+	elif month == -5:
+		sign = 'chance' if (day < 0) else 'high chance'
+	elif month == 0:
 		sign = 'high chance' if (day < 2) else 'chance'
 	elif month == 2:
 		sign = 'chance' if (day < 3) else 'low chance'
