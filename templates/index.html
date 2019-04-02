@@ -32,13 +32,15 @@
 
   <div>
     <h2>1. Input the first date of your last period.</h2>
-      <!-- THIS PART IS FOR THE CALENDAR-->
+      <!-- THIS PART IS FOR THE CALENDAR (source: https://codepen.io/anon/pen/oVRzBb)-->
 
+    <form method="post" action="/canigetpregnant">
       <div class="date-picker">
     	<div class="input">
     		<div class="result">Select Date: <span></span></div>
     		<button><i class="fa fa-calendar"></i></button>
     	</div>
+      <!-- is it the class name that I use to differentiate between the two inputs?-->
     	<div class="calendar"></div>
     </div>
 
@@ -48,7 +50,6 @@
   <h2>2. Input the length of your cycle.</h2>
     <p><i>if you are unsure the average cycle is 28 days</i></p>
 
-  <form method="post" action="/CycleLength">
     <div class=slider>
       <!-- THIS PART IS FOR THE NUMBER SLIDER-->
       <p id="sliderValue"></p>

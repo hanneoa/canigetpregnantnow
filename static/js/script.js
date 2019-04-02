@@ -5,6 +5,7 @@
 // This is the end of slider JavaScript //
 
 // this is the calendar jscode (uses jquery)
+// URl: https://codepen.io/anon/pen/oVRzBb //
 
 $(function() {
   $( ".calendar" ).datepicker({

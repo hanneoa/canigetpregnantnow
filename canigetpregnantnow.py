@@ -10,7 +10,7 @@
     #push out first day (and following 5-10 days) as ovulation stage
     #convert back to date
 
-from flask import Flask , render_template, request
+from flask import Flask, render_template, request
 from datetime import datetime
 
 app = Flask("Test")
@@ -26,7 +26,7 @@ def Change_day1_to_integer():
 	day1 = form_data["day1"]
 	formatday1 = datetime.datetime(day1)
 
-@app.route("/CycleLength", methods=["POST"])
+@app.route("/canigetpregnant", methods=["POST"])
 def Give_ovulation_date():
 	form_data = request.form
 	return render_template("index.html")
@@ -44,7 +44,15 @@ def Give_length_of_cycle():
 
 def Can_I_get_pregnant(day1, CycleLength):
     OvulationFirstDay = day1 + CycleLength/2
-    return OvulationFirstDay
+	return OvulationFirstDay
+
+
+def Ovulation_week(OvulationFirstDay):
+	if OvulationFirstDay >= 14,OvulationFirstDay <= 21,
+	return 'You could get pregnant this week',
+	if OvulationFirstDay <= 14,OvulationFirstDay >= 21,
+	return 'You are less likely to get pregnant this week'
+
 
 #exampleDate = Give_first_day_of_cycle()
 #exampleLength = Give_length_of_cycle()
